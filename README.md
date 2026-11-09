@@ -28,6 +28,8 @@ Instead of slicing a whole model in flat layers parallel to the bed, you split i
 - **Hotend collision check**: after slicing, a sidebar warning shows where the hotend would hit already-printed material.
 - **Help ▸ Multiplanar Tutorial** walks through the workflow.
 
+- **Stress planner** (`tools/stress-planner`, this fork): reads an Onshape assembly and a load file, then works out mate reactions and runs FEA on each part. From that it picks the part orientation and the cut planes that keep tension inside the layers. It writes a `.3mf` that opens here with the planes already placed. See [docs/stress-planner.md](docs/stress-planner.md).
+
 These features are switched on per printer: **Printer settings ▸ Motion ability ▸ Non-planar printing** (Advanced mode). The printer type there decides what the G-code looks like:
 
 - **A/B, B/C or A/C** for machines with two rotary axes. The segment orientations are written as rotary-axis moves. **A/C** (a C turntable on an A cradle) converts the exported G-code to the machine's own coordinates, using the A/C settings under Motion ability; **A/B** is an experimental first take on a bed tilted by three independent Z leadscrews ("tri-Z"): A and B are the bed's tilt about X and Y, which the firmware turns into leadscrew heights.
