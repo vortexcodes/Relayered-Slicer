@@ -1,0 +1,36 @@
+{
+  "name": "15 kg hanging from the hook",
+  "gravity": [
+    0,
+    0,
+    -9.81
+  ],
+  "material": "PETG",
+  "load_factor": 1.0,
+  "fixtures": {
+    "Wall plate": {
+      "point": [
+        0,
+        -6,
+        60
+      ],
+      "radius": 80
+    }
+  },
+  "loads": [
+    {
+      "part": "Hook",
+      "point": [
+        0,
+        70,
+        60
+      ],
+      "force": [
+        0,
+        0,
+        -147
+      ],
+      "label": "hanging load"
+    }
+  ]
+}

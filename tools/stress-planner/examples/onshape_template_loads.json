@@ -1,0 +1,12 @@
+{
+  "name": "replace with your load case",
+  "material": "PETG",
+  "load_factor": 2.0,
+  "gravity": [0, 0, -9.81],
+  "fixed": ["Base"],
+  "fixtures": {"Base": {"point": [0, 0, 0], "radius": 15}},
+  "loads": [
+    {"part": "Arm", "point": [120, 0, 40], "force": [0, 0, -50], "label": "payload", "radius": 6},
+    {"part": "Arm", "at_mate": "Motor", "moment": [0, 0, 800], "label": "motor torque"}
+  ]
+}
